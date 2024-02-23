@@ -1,0 +1,36 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+kernel:
+    resource: App\Kernel
+    type: attribute
+
+book_list:
+    path: /books
+    controller: App\Controller\BookController::getAllBooks
+    methods: GET
+
+create_author:
+    path: /authors/new
+    controller: App\Controller\AuthorController::createAuthor
+    methods: POST
+
+create_book:
+    path: /books/new
+    controller: App\Controller\BookController::createBook
+    methods:  POST
+
+edit_publisher:
+    path: /publishers/{id}
+    controller: App\Controller\PublisherController::editPublisher
+    methods:  PUT
+
+delete_entity:
+    path: /{entity}/{id}/delete
+    controller: App\Controller\DeleteController::deleteEntity
+    methods: DELETE
+    requirements:
+        entity: books|authors|publishers
