@@ -1,6 +1,6 @@
 ### Шаг 1: Клонирование репозитория
-git clone https://github.com/your-repository.git
-cd your-repository
+git clone https://github.com/ava-mirtl/indins.git
+cd indins
 
 
 ### Шаг 2: Установка зависимостей
